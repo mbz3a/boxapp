@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../content/logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../css/mohit_masahat_hajme.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Volume Of Objects</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <div class="w3-col l4 m4 s4 w3-right">
+                <img src="../content/hajm.png" alt="logo" class="logo logop">
+            </div>
+            <div class="center w3-col l4 m4 s4 w3-right">
+                <p>حجم اجسام</p>
+            </div>
+            <div class="w3-col l4 m4 s4 w3-center left-side">
+                <a href="tool_box.html">
+                    <img src="../content/icons8-back-arrow-100.png" class="back-ward" alt="back">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-container w3-row">
+        <div class="p-container">
+            <div class="w3-row cards-container">
+                <div class="hajm-cards w3-col l3 m3 s12">
+                    <p>مخروط</p>
+                    <input type="text" name="makhroot" id="shoa_makhrot" placeholder="ارتفاع"><br>
+                    <input type="text" name="makhroot" id="ertefa_makhrot" placeholder="شعاع"><br>
+                    <input type="submit" name="calculate_btn" value="محاسبه" onclick="MakhrotHajm();">
+                    <p id="hajm_usr_otpt_makhroot"></p>
+                </div>
+                <div class="hajm-cards w3-col l3 m3 s12">
+                    <p> مکعب مربع</p>
+                    <input type="text" name="mokab-morabaaa" id="mokab-morabaaa" placeholder="طول ضلع"><br>
+                    <input type="submit" name="calculate_btn" value="محاسبه" onclick="mokab_morabaaaHajm();">
+                    <p id="hajm_usr_otpt_mokab_morabaaa"></p>
+                </div>
+                <div class="hajm-cards w3-col l3 m3 s12">
+                    <p>کره</p>
+                    <input type="text" name="shoa_kore" id="shoa_kore" placeholder="شعاع"><br>
+                    <input type="submit" name="calculate_btn" value="محاسبه" onclick="koreHajm();">
+                    <p id="hajm_usr_otpt_shoa_kore"></p>
+                </div>
+                <div class="hajm-cards w3-col l3 m3 s12">
+                    <p>مکعب مستطیل</p>
+                    <input type="text" name="m_m_tol" id="m_m_tol" placeholder="طول"><br>
+                    <input type="text" name="m_m_arz" id="m_m_arz" placeholder="عرض"><br>
+                    <input type="text" name="m_m_ertefa" id="m_m_ertefa" placeholder="ارتفاع"><br>
+                    <input type="submit" name="calculate_btn" value="محاسبه" onclick="m_mHajm();">
+                    <p id="hajm_usr_otpt_makhroot"></p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- script  -->
+    <script src="../js/mohit_masahat_hajm.js"></script>
+    <script src="../CDN/vue.min.js"></script>
+    <script src="../js/jquery-lib.js"></script>
+</body>
+</html>

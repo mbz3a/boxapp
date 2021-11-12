@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../content/logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/unit-conversion.css">
+    <title>Unit Conversion</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <div class="w3-col l4 m4 s4 w3-right">
+                <img src="../content/unit-conversion.png" alt="logo" class="logo">
+            </div>
+            <div class="center w3-col l4 m4 s4 w3-right">
+                <p>تبدیل واحد</p>
+            </div>
+            <div class="w3-col l4 m4 s4 w3-center left-side">
+                <a href="tool_box.html">
+                    <img src="../content/icons8-back-arrow-100.png" class="back-ward" alt="back">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-container w3-row">
+        <div class="tabs-container">
+            <div class="tab">
+                <button class="tablinks" onclick="openUnit(event, 'temperature')" id="defaultOpen">دما</button>
+                <button class="tablinks" onclick="openUnit(event, 'mass')">جرم</button>
+            </div>     
+            <div id="temperature" class="tabcontent">
+                <p>لطفا واحد مورد نظر را انتخاب کنید (دما) : </p>
+                <div class="w3-row rows-of-content">
+                    <div class="w3-col l4 m4 s12 cards">
+                        <p>فارنهایت</p>
+                        <input type="text" name="farenhait" id="farenhait" value="" placeholder="فارنهایت"><br>
+                        <input type="submit" name="hesab" value="محاسبه" onclick="farnhaitTo();"><br>
+                        <font>سلسیوس : </font><font  id="celsius"></font><br>
+                        <font>کلوین : </font><font  id="kelvin"></font><br>
+                    </div>
+                    <div class="w3-col l4 m4 s12 cards">
+                        <p>کلوین</p>
+                        <input type="text" name="kelvin" id="kelvin1"   value="" placeholder="کلوین"><br>
+                        <input type="submit" name="hesab" value="محاسبه" onclick="kelvinTo();"><br>
+                        <font>سلسیوس : </font><font id="celsius1"></font><br>
+                        <font>فارنهایت : </font><font id="farenhait1"></font><br>
+                    </div>
+                    <div class="w3-col l4 m4 s12 cards">
+                        <p>سلسیوس</p>
+                        <input type="text" name="celsius" id="celsius2" value="" placeholder="سلسیوس"><br>
+                        <input type="submit" name="hesab" value="محاسبه" onclick="celsiusTo();"><br>
+                        <font>فارنهایت : </font><font id="farenhait2"></font><br>
+                        <font>کلوین : </font><font id="kelvin2"></font><br>
+                    </div>
+                </div>     
+            </div>       
+            <div id="mass" class="tabcontent">
+                <p>لطفا واحد مورد نظر را انتخاب کنید (جرم): </p>
+                <div class="w3-row rows-of-content">
+                    <div class="w3-col l4 m4 s12 cards">
+                        <p>پوند</p>
+                        <input type="text" name="pound" id="pound" value="" placeholder="پوند" onkeyup="poundTo();"><br>
+                        <!-- <input type="submit" name="hesab" value="محاسبه" onclick=""><br> -->
+                        <font>کیلو گرم : </font><font  id="kilograms"></font><br>
+                        <font>اونس : </font><font  id="ounces"></font><br>
+                    </div>
+                    <div class="w3-col l4 m4 s12 cards">
+                        <p>اونس</p>
+                        <input type="text" name="ounces1" id="ounces1"   value="" placeholder="اونس"><br>
+                        <input type="submit" name="hesab" value="محاسبه" onclick="ouncesTo();"><br>
+                        <font>کیلو گرم : </font><font id="kilograms1"></font><br>
+                        <font>پوند : </font><font id="pound1"></font><br>
+                    </div>
+                    <div class="w3-col l4 m4 s12 cards">
+                        <p>کیلو گرم</p>
+                        <input type="text" name="celsius" id="kilograms2" value="" placeholder="کیلو گرم"><br>
+                        <input type="submit" name="hesab" value="محاسبه" onclick="kilogramsTo();"><br>
+                        <font>اونس : </font><font  id="ounces2"></font><br>
+                        <font>پوند : </font><font id="pound2"></font><br>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+        <!-- scripts -->
+    <script src="../CDN/vue.min.js"></script>
+    <script src="../js/jquery-lib.js"></script>
+    <script src="../js/unit_conversion.js"></script>
+</body>
+</html>

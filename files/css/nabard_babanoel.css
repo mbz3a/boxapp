@@ -1,0 +1,465 @@
+body {
+  overflow: hidden;
+  width: 100%;
+}
+
+.stage {
+  color: #333;
+  font-family: "Bangers";
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  direction: ltr;
+  position: absolute;
+
+}
+.responsive-message {
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+  color: #333;
+  display: flex;
+  font-family: "Bangers";
+  flex-direction: column;
+  height: 75%;
+  justify-content: center;
+  left: 50%;
+  padding: 30px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%) skew(-2.5deg);
+  width: 75%;
+  z-index: 20;
+}
+@media screen and (min-width: 910px) {
+  .responsive-message {
+    display: none;
+  }
+}
+
+.responsive-message h4 {
+  font-size: 25px;
+  margin: 15px;
+}
+
+.header {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: translate(-50%, 0);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.healthbar {
+  display: flex;
+  flex: 1;
+}
+
+.background {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 0;
+}
+
+.healthbar__santa,
+.healthbar__krampus {
+  display: flex;
+  flex: 1;
+  padding: 57px;
+  position: relative;
+}
+
+.healthbar__krampus h3 {
+  order: 2;
+}
+
+.healthbar__santa-meter,
+.healthbar__krampus-meter {
+  flex: 1;
+  margin: 20px;
+}
+
+.result {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transform: scale(0);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  visibility: hidden;
+  z-index: 5;
+}
+.fight-over .result {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+.santa-wins .result {
+  background-color: rgba(217, 106, 113, 0.85);
+}
+.krampus-wins .result {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.result__title, .santa-key-a,
+.santa-key-s,
+.krampus-key-k,
+.krampus-key-l {
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.2), 0 0 rgba(255, 255, 255, 0);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.2), 0 0 rgba(255, 255, 255, 0.2);
+  }
+  70% {
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.2), 0 50px rgba(255, 255, 255, 0);
+  }
+  100% {
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.2), 0 0 rgba(255, 255, 255, 0);
+  }
+}
+.result__title {
+  color: #fff;
+  font-size: 15vw;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.fighters {
+  display: flex;
+  height: 645px;
+  margin: 0;
+  width: 910px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -43%);
+}
+
+.santa-body,
+.krampus-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.santa-body {
+  margin-left: 10%;
+}
+
+.krampus-body {
+  margin-right: 10%;
+}
+
+.santa-l-arm,
+.santa-r-arm,
+.krampus-l-arm,
+.krampus-r-arm {
+  height: 50px;
+  position: relative;
+  top: 25%;
+  width: 80%;
+}
+
+.santa-l-arm,
+.santa-r-arm,
+.krampus-l-arm,
+.krampus-r-arm {
+  position: absolute;
+}
+
+.santa-r-arm,
+.krampus-l-arm {
+  left: 50%;
+  z-index: 2;
+}
+
+.krampus-l-arm,
+.krampus-r-arm {
+  left: auto;
+  right: 50%;
+}
+
+.santa-l-arm {
+  left: 70%;
+  z-index: -1;
+}
+
+.krampus-r-arm {
+  right: 70%;
+  z-index: -1;
+}
+
+.santa-l-arm__upper,
+.santa-l-arm__lower,
+.santa-r-arm__upper,
+.santa-r-arm__lower,
+.krampus-l-arm__upper,
+.krampus-l-arm__lower,
+.krampus-r-arm__upper,
+.krampus-r-arm__lower {
+  height: 50%;
+  position: absolute;
+  width: 90%;
+}
+
+.krampus-l-arm__upper,
+.krampus-r-arm__upper {
+  transform: translate(21%, 123%) rotate(-60deg);
+}
+
+.krampus-l-arm__lower,
+.krampus-r-arm__lower {
+  transform: translate(0, 140%) rotate(60deg);
+}
+
+.santa-l-arm__lower,
+.santa-r-arm__lower {
+  transform: translate(0%, 123%) rotate(-60deg);
+}
+
+.santa-l-arm__upper,
+.santa-r-arm__upper {
+  transform: translate(-20%, 123%) rotate(60deg);
+}
+
+.santa-body__head,
+.krampus-body__head {
+  height: 10%;
+  position: relative;
+  top: -20%;
+  width: 50%;
+  z-index: 10;
+}
+
+.krampus-body__head {
+  top: -23%;
+}
+
+.santa-body__torso,
+.krampus-body__torso {
+  height: 50%;
+  position: relative;
+  width: 70%;
+}
+
+.krampus-body__torso {
+  width: 71%;
+  left: 18%;
+  height: 63%;
+}
+
+.santa-body__torso__inner,
+.krampus-body__torso__inner {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.santa-legs {
+  bottom: 25%;
+  height: 25%;
+  left: 25%;
+  position: absolute;
+  transform: translate(-30%, 100%);
+  width: 25%;
+  z-index: -1;
+}
+
+.krampus-legs {
+  bottom: 28%;
+  height: 25%;
+  position: absolute;
+  right: 9%;
+  transform: translate(-30%, 100%);
+  width: 25%;
+  z-index: 2;
+}
+
+.santa-legs__l-upper,
+.santa-legs__l-lower,
+.santa-legs__r-upper,
+.santa-legs__r-lower,
+.krampus-legs__l-upper,
+.krampus-legs__l-lower,
+.krampus-legs__r-upper,
+.krampus-legs__r-lower {
+  height: 50%;
+  left: 30%;
+  position: absolute;
+  width: 40%;
+}
+
+.santa-legs__l-upper,
+.krampus-legs__l-upper,
+.santa-legs__r-upper,
+.krampus-legs__r-upper {
+  transform: rotate(0deg);
+}
+
+.santa-legs__r-upper,
+.santa-legs__r-lower {
+  z-index: 5;
+}
+
+.santa-legs__l-foot,
+.santa-legs__r-foot {
+  bottom: -10%;
+  height: 20%;
+  left: 29%;
+  position: absolute;
+  width: 44%;
+  z-index: 5;
+}
+
+.santa-legs__l-foot {
+  left: 52%;
+}
+
+.santa-legs__l-lower,
+.krampus-legs__l-lower,
+.santa-legs__r-lower,
+.krampus-legs__r-lower {
+  transform: rotate(0deg);
+  top: 32%;
+}
+
+.santa-legs__l-upper,
+.santa-legs__l-lower,
+.krampus-legs__r-upper,
+.krampus-legs__r-lower {
+  left: 55%;
+}
+
+.krampus-legs__r-upper {
+  left: 59%;
+}
+
+.krampus-legs__r-lower,
+.krampus-legs__l-lower {
+  z-index: -1;
+  left: 27%;
+}
+
+.krampus-legs__r-lower {
+  left: 56%;
+}
+
+.krampus-legs__r-foot,
+.krampus-legs__l-foot {
+  bottom: -10%;
+  height: 20%;
+  left: 17%;
+  position: absolute;
+  width: 25%;
+  z-index: 5;
+}
+
+.krampus-legs__r-foot {
+  left: 47%;
+}
+
+.instructions__santa,
+.instructions__krampus {
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  position: absolute;
+}
+
+.instructions__krampus {
+  left: auto;
+  padding: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.instructions__santa::before {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
+  border-style: solid;
+  border-width: 200px 0 0 400px;
+  bottom: -20px;
+  content: "";
+  height: 0;
+  left: -20px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+.instructions__krampus::before {
+  border-color: transparent transparent rgba(255, 255, 255, 0.95) transparent;
+  border-style: solid;
+  border-width: 0 0 200px 400px;
+  bottom: -20px;
+  content: "";
+  height: 0;
+  right: -20px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+.instructions__krampus p {
+  text-align: right;
+}
+
+.santa-key-a,
+.santa-key-s,
+.krampus-key-k,
+.krampus-key-l {
+  background: #fff;
+  border: 2px solid #333;
+  color: #d96a71;
+  display: inline-block;
+  font-size: 25px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 25px;
+}
+
+.btn-reset {
+  background: #fff;
+  border-radius: 0;
+  border: 0;
+  bottom: 10%;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  color: #333;
+  font-family: "Bangers";
+  font-size: 20px;
+  padding: 15px 25px;
+  position: relative;
+  outline: 0;
+}
+.btn-reset:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-reset:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  bottom: 9.5%;
+}

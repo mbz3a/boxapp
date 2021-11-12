@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../content/logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../css/prime_test.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Prime Test</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <div class="w3-col l4 m4 s4 w3-right">
+                <img src="../content/primet_est.png" alt="logo" class="logo">
+            </div>
+            <div class="center w3-col l4 m4 s4 w3-right">
+                <p>تست اعداد اول</p>
+            </div>
+            <div class="w3-col l4 m4 s4 w3-center left-side">
+                <a href="tool_box.html">
+                    <img src="../content/icons8-back-arrow-100.png" class="back-ward" alt="back">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-container w3-row">
+        <div class="p-container">
+            <div class="w3-row pr-title">
+                <p>لطفا عدد مورد نظر خود را وارد کنید: </p>
+                <hr>
+            </div>
+            <div class="w3-row pr-claculation">
+                <input type="text" value="" name="numbers"  placeholder="...." id="numberInput"><br>
+                <input type="submit" value="محاسبه" onclick="prime_test();"><br>
+                <p  id="output_pr"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- script  -->
+    <script src="../js/prime_test.js"></script>
+    <script src="../CDN/vue.min.js"></script>
+    <script src="../js/jquery-lib.js"></script>
+</body>
+</html>

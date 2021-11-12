@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./content/logo.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOX</title>
+    <link rel="stylesheet" href="files/CDN/normalize.min.css">
+    <link rel="stylesheet" href="files/css/w3.css">
+    <link rel="stylesheet" href="files/css/style.css">
+    <link rel="stylesheet" href="files/css/clock.css">
+</head>
+<body>
+    <div class="w3-row">
+        <div class="w3-col l4 m4 s12 dashboard w3-left">
+            <div>
+                <div class="w3-row w3-center">
+                    <img src="files/content/logo.png" alt="logo" class="w3-show-inline-block">
+                    <h3><b>BOX</b></h3>
+                    <p class="paragraph">اپلیکیشن تحت وب  باکس</p>
+                </div>
+                <div class="w3-row w3-center">
+                    <div id="clock">
+                        <p class="date">{{ date }}</p>
+                        <p class="time">{{ time }}</p>
+                    </div>
+                </div>
+                <div class="w3-row w3-center aboutus">
+                    <h2>درباره ی ما</h2>
+                    <p>عاطفه مرادی</p>
+                    <p>نام درس: پروژه</p>
+                    <p>استاد مربوطه : نظری</p>
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="w3-col l8 m8 s12 w3-right margin_top ">
+            <div class="w3-row w3-center ">
+                <div class="btn-des">
+                    <div class="w3-row">
+                        <div class="w3-col l4 m4 s4 w3-right" id="btndes">
+                            <a href="files/pages/tool_box.html">
+                                <img src="files/content/tools.png" alt="tools" class="img-des">
+                            </a>
+                        </div>
+                        <div class="w3-col l8 m8 s8 w3-left content trans_left">
+                            <h1>جعبه ی ابزار</h1>
+                            <p>این بخش شامل ابزار های کاربردی ریاضی است که کار محسبات را برای ما اسان تر میکند،برای درسترسی به این بخش بر روی لگو کلیک کنید</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="w3-row w3-center ">
+                <div class="btn-des">
+                    <div class="w3-row">
+                        <div class="w3-col l4 m4 s4 w3-left" id="btndes">
+                            <a href="files/pages/games.html">
+                                <img src="files/content/game.png" alt="game" class="img-des">
+                            </a>
+                        </div>
+                        <div class="w3-col l8 m8 s8 w3-right content trans_right">
+                            <h1>بازی </h1>
+                            <p>این بخش شامل بازی هایی ساده اما به شدت مفرح می باشد که افراد می توانند در اوقات فراغت،خود را با انها سرگرم نمایند ، برای دسترسی بروی این بخش بر روی لگو کلیک نمایید</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-row w3-center">
+                <div class="btn-des">
+                    <div class="w3-row">
+                        <div class="w3-col l4 m4 s4 w3-right" id="btndes">
+                            <a href="files/pages/paint.html">
+                                <img src="files/content/paint.png" alt="paint" class="img-des">
+                            </a>
+                        </div>
+                        <div class="w3-col l8 m8 s8 w3-left content trans_left">
+                            <h1>نقاشی</h1>
+                            <p>این بخش شامل یک ابزار نقاشی ساده اما قدرتمند می باشد،که میتوان در نهایت حتی از نقاشی خود خروجی با فرمت png و jepg نیز دریافت کنید،برای درست رسی به ابن بخش میتوانید بر روی لگو آن کلیک کنید</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- script -->
+
+    <script src="files/CDN/vue.min.js"></script>
+    <script src="./js/jquery-lib.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="files/js/clock.js"></script>
+</body>
+</html>

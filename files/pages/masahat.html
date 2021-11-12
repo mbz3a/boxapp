@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../content/logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../css/mohit_masahat_hajme.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Perimeter and Area</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <div class="w3-col l4 m4 s4 w3-right">
+                <img src="../content/masahat-mohit.png" alt="logo" class="logo">
+            </div>
+            <div class="center w3-col l4 m4 s4 w3-right">
+                <p>مساحت و محیط</p>
+            </div>
+            <div class="w3-col l4 m4 s4 w3-center left-side">
+                <a href="tool_box.html">
+                    <img src="../content/icons8-back-arrow-100.png" class="back-ward" alt="back">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-container w3-row">
+        <div class="p-container">
+            <div class="w3-row tabs-contorol">
+                <div class="tab">
+                    <button class="tablinks" onclick="shapes(event, 'mohit')" id="defaultOpen">محیط</button>
+                    <button class="tablinks" onclick="shapes(event, 'masahat')">مساحت</button>
+                </div>     
+                <div id="mohit" class="tabcontent">
+                    <div class="w3-row">
+                        <div class="w3-col l3 m6 s12 cards mohit-cards">
+                            <p>مربع</p>
+                            <input type="text" name="user_input_morabaa"  id="morabaa1" placeholder="طول ضلع" value=""><br>
+                            <input type="submit" value="محاسبه" onclick="morabaMohit();">
+                            <p id="usr_utpt_morabaa1"></p>
+                        </div>
+                        <div class="w3-col l3 m6 s12 cards mohit-cards">
+                            <p>مستطیل</p>
+                            <input type="text" name="user_input_tol" value="" id="tol1" placeholder="طول"><br>
+                            <input type="text" name="user_input_arz" value="" id="arz1" placeholder="عرض"><br>
+                            <input type="submit" value="محاسبه" onclick="mostatilMohit();">
+                            <p id="usr_utpt_mostatil"></p>
+                        </div>
+                        <div class="w3-col l3 m6 s12 cards  mohit-cards">
+                            <p>مثلث</p>
+                            <input type="text" name="user_input_a" value="" id="mos_a1" placeholder="A"><br>
+                            <input type="text" name="user_input_b" value="" id="mos_b1" placeholder="B"><br>
+                            <input type="text" name="user_input_c" value="" id="mos_c1" placeholder="C"><br>
+                            <input type="submit" value="محاسبه" onclick="mosalasMohit();">
+                            <p id="usr_utpt_mosalas"></p>
+                        </div>
+                        <div class="w3-col l3 m6 s12 cards mohit-cards">
+                            <p>دایره</p>
+                            <input type="text" name="user_input" value="" id="shoaa1" placeholder="شعاع"><br>
+                            <input type="submit" value="محاسبه" onclick="dayereMohit();" >
+                            <p id="usr_utpt_dayere"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="masahat" class="tabcontent">
+                    <div class="w3-row">
+                        <div class="w3-col l3 m6 s12 cards masahat-cards">
+                            <p>مربع</p>
+                            <input type="text" name="user_input" value="" id="morabaa2" placeholder="طول ضلع"><br>
+                            <input type="submit" value="محاسبه" onclick="morabaMasahat();" >
+                            <p id="usr_utpt_morabaa11"></p>
+                        </div>
+                        <div class="w3-col l3 m6 s12 cards masahat-cards">
+                            <p>مستطیل</p>
+                            <input type="text" name="user_input" value="" id="tol2" placeholder="طول"><br>
+                            <input type="text" name="user_input" value="" id="arz2" placeholder="عرض"><br>
+                            <input type="submit" value="محاسبه" onclick="mostatilMasahat();" >
+                            <p id="usr_utpt_mostatil2"></p>
+                        </div>
+                        <div class="w3-col l3 m6 s12 cards masahat-cards">
+                            <p>مثلث</p>
+                            <input type="text" name="user_input" value="" id="mos_ertefa2" placeholder="ارتفاع"><br>
+                            <input type="text" name="user_input" value="" id="mos_ghaedeh2" placeholder="قاعده"><br>
+                            <input type="submit" value="محاسبه" onclick="mosalasMasahat();" >
+                            <p id="usr_utpt_mosalas2"></p>
+                        </div>
+                        <div class="w3-col l3 m6 s12 cards masahat-cards">
+                            <p>دایره</p>
+                            <input type="text" name="user_input" value="" id="shoaa2" placeholder="شعاع"><br>
+                            <input type="submit" value="محاسبه" onclick="dayereMasahat();">
+                            <p id="usr_utpt_dayere2"></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script  -->
+    <script src="../js/mohit_masahat_hajm.js"></script>
+    <script src="../CDN/vue.min.js"></script>
+    <script src="../js/jquery-lib.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+@font-face {
+    font-family:Shabnam;
+    src: url(../font/Shabnam.ttf);
+}
+@font-face {
+    font-family:'RobotoCondensed';
+    src: url(../font/RobotoCondensed.ttf);
+}
+html , body {
+    direction: rtl;
+	background-image: linear-gradient(to bottom right, #d8b5ff, #1eae98);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.3);
+}
+.dashboard{
+    width: 100%;
+    height: 8em;
+	/*background-image: linear-gradient(to right, dodgerblue , gray);*/
+	background: rgba(255,255,255,0.8);
+    color:  ;
+    cursor: pointer;
+    font-weight: bold;
+	padding: 5px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    position: absolute;
+	left: 0;
+    box-shadow: 5px 0px 20px 1px rgba(0,0,0,0.8);
+
+}
+.container{
+    margin-right: 12.5%;
+}
+.logop{
+    margin-top:15px;
+}
+.logo{
+    transform: translateY(-13px);
+    margin-right: 2em;
+
+}
+.center p{
+    transform: translateY(-24px);
+    font-family: 'Shabnam';
+    font-size: 3em;
+}
+.back-ward{
+    width: 70px;
+    transform: translateY(15px);
+}
+.main-container{
+    width: 100%;
+    margin-top:10.5em;
+}
+.p-container {
+    margin: auto;
+    width: 93%;
+}
+.tabs-container{
+    margin: auto;
+    width: 100%;
+}
+.tab {
+    width:100%;
+    overflow: hidden;
+  }
+  
+  /* Style the buttons inside the tab */
+.tab button {
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 40px 0 40px;
+    border-radius: 60px 0 0 0 ;
+    transition: 0.3s;
+    font-size:24px;
+    font-family: 'Shabnam';
+}  
+.tab button:hover {
+    background-color: #133636;
+}
+.tab button.active {
+    background-color: #0d6363;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    background:#0d6363 ;
+}
+.tabcontent p{
+    text-align: center;
+    font-size: 23px;
+    color: #fff;
+    font-family: 'Shabnam';
+}
+.cards{
+    padding: 0 10px 10px 10px ;
+    text-align: center;
+    background: #027c6a;
+    margin:10px 0 10px 20px;
+}
+.mohit-cards{
+    height: 25.8em;
+}
+.masahat-cards{
+    height: 22em;
+}
+.cards input{
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.cards input[type=text]{
+    width: 65%;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Shabnam';
+    margin-bottom: 5px;
+}
+.cards input[type=submit]{
+    border-radius: 10px ;
+    font-size: 23px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: 'Shabnam';
+    background:#133636;
+}
+/* HAJM */ 
+.cards-container{
+    margin:auto;
+    width: 100%;
+}
+.hajm-cards{
+    transform: translateX(40px);
+    background:#027c6a ;
+    text-align: center;
+    margin-right: 10px;
+    height: 25.54em;
+}
+.hajm-cards p{
+    font-size: 24px;
+    font-family:'Shabnam';
+    color:#fff;
+}
+.hajm-cards input {
+    cursor: pointer;
+    font-family:'Shabnam';
+    text-align:center ;
+    border:none;
+    margin-bottom: 10px;
+}
+.hajm-cards input[type=text]:focus{
+    box-shadow: 0px 3px 15px 2px rgba(0,0,0,0.5);
+}
+.hajm-cards input[type=text] {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+.hajm-cards input[type=submit]{
+    border-radius:10px ;
+    font-size: 23px;
+    padding: 7.5px 15px;
+    background:#133636;
+    color: #fff;
+    margin-top: 10px;
+}

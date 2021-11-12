@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../content/logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../css/eq-2.css">
+    <link rel="stylesheet" href="../css/w3.css">
+    <title>Equation 2</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <div class="w3-col l4 m4 s4 w3-right">
+                <img src="../content/eq 2.png" alt="logo" class="logo">
+            </div>
+            <div class="center w3-col l4 m4 s4 w3-right">
+                <p>جواب معادله ی درجه 2</p>
+            </div>
+            <div class="w3-col l4 m4 s4 w3-center left-side">
+                <a href="tool_box.html">
+                    <img src="../content/icons8-back-arrow-100.png" class="back-ward" alt="back">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-container w3-row">
+        <div class="container">
+            <p class="p-title">لطفا  ضریب های معادله ی خود را در بخش های زیر وارد کنید:</p>
+            <hr>
+            <div class="calculations">
+                <span>
+                    <label>A : </label>
+                    <input type="text" id="f_a" name="a" value="">
+                </span>
+                <span>
+                    <label>B : </label>
+                    <input type="text" id="s_b" name="b" value="">
+                </span>
+                <span>
+                    <label>C : </label>
+                    <input type="text" id="t_c" name="c" value="">
+                </span>
+                <input type="submit" id="submit_btn" onclick="eq2Computing();" class="submit_btn" value="محاسبه">
+                <!-- <input type="submit" id="submit_btn" onclick="clear();" class="submit_btn" value="پاک کردن"> -->
+            
+                <div class="frist">
+                    </font><font id="an_x1" class="j_x1"></font>
+                </div>
+                <div>
+                    <font id="an_x2" class="j_x2"></font>
+                </div>
+                <div>
+                    <font id="an_delta" class="j_x2"></font>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script  -->
+    <script src="../js/eq2.js"></script>
+    <script src="../CDN/vue.min.js"></script>
+    <script src="../js/jquery-lib.js"></script>
+</body>
+</html>

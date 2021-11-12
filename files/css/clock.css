@@ -1,0 +1,36 @@
+p {
+    margin: 0;
+    padding: 0;
+  }
+#clock {
+    font-family:'Adventure';
+    margin-top: 2em;
+    font-family: 'Share Tech Mono', monospace;
+    color: #000;
+    text-align: center;
+    color: #000;
+
+}
+#clock .time {
+    font-family:'Adventure';
+    margin-top:-0.2em;
+    letter-spacing: 0.05em;
+    font-size: 80px;
+    padding: 5px 0;
+}
+#clock .date {
+    font-family:'Adventure';
+    letter-spacing: 0.1em;
+    font-size: 24px;
+}
+#clock .text {
+    font-family:'Adventure';
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    padding: 20px 0 0;
+  }
+@media (max-width:601px){
+    #clock .time {
+        font-size: 68px;
+    }
+}

@@ -1,0 +1,122 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+	  background-image: linear-gradient(to bottom right, #d8b5ff, #1eae98);
+	  background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+input{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  outline: none;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 2px 4px rgba(0,0,0,.3);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.calculator {
+  width: 300px;
+  padding: 20px;
+  background-color: #262626;
+  border-radius: 10px;
+  box-shadow: 0 2px 9px rgba(0,0,0,.3);
+  position: relative;
+}
+#screen {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+#screen > input {
+  width: 100%;
+  height: 100%;
+  background-color: #50755a;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 18px;
+  padding: 0 10px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.8);
+  color: #111;
+}
+#buttons-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0;
+}
+#buttons-inner > input {
+  flex-basis: 23%;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e8e8e8;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+
+}
+#equal {
+  background-color: orangered !important;
+  color: #fff !important;
+}
+
+#button-l {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#button-l input {
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+
+}
+#button-l #clear {
+  width:37%;
+  color: #333;
+}
+#button-l #theme {
+  width: 57%;
+  background-color: #777;
+  color: #fff;
+}
+.display .theme, .display .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.dark-theme {
+  background-color: #363636;
+}
+.light-theme {
+  background-color: #e8e8e8;
+}
+.light-theme #buttons-inner > input {
+  background-color: #555;
+  color: #e8e8e8
+}
+
+.light-theme #button-l #theme {
+  background-color: #262626;
+}
+.back-arrow img{
+  width: 70px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
